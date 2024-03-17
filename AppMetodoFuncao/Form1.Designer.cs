@@ -45,6 +45,14 @@
             this.btnMultiplicar = new System.Windows.Forms.Button();
             this.btnSomar = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
+            this.lstFor = new System.Windows.Forms.ListBox();
+            this.btnWhile = new System.Windows.Forms.Button();
+            this.btnFor = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.txtSoNumero = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.btnSonumero = new System.Windows.Forms.Button();
+            this.btnSoLetra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbbOpcao
@@ -196,7 +204,7 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(414, 89);
+            this.btnIniciar.Location = new System.Drawing.Point(12, 99);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(96, 23);
             this.btnIniciar.TabIndex = 16;
@@ -207,11 +215,91 @@
             this.btnIniciar.MouseLeave += new System.EventHandler(this.btnIniciar_MouseLeave);
             this.btnIniciar.MouseHover += new System.EventHandler(this.btnIniciar_MouseHover);
             // 
+            // lstFor
+            // 
+            this.lstFor.FormattingEnabled = true;
+            this.lstFor.Location = new System.Drawing.Point(401, 23);
+            this.lstFor.Name = "lstFor";
+            this.lstFor.Size = new System.Drawing.Size(120, 160);
+            this.lstFor.TabIndex = 17;
+            // 
+            // btnWhile
+            // 
+            this.btnWhile.Location = new System.Drawing.Point(527, 52);
+            this.btnWhile.Name = "btnWhile";
+            this.btnWhile.Size = new System.Drawing.Size(75, 23);
+            this.btnWhile.TabIndex = 19;
+            this.btnWhile.Text = "WHILE";
+            this.btnWhile.UseVisualStyleBackColor = true;
+            this.btnWhile.Click += new System.EventHandler(this.btnWhile_Click);
+            // 
+            // btnFor
+            // 
+            this.btnFor.Location = new System.Drawing.Point(527, 23);
+            this.btnFor.Name = "btnFor";
+            this.btnFor.Size = new System.Drawing.Size(75, 23);
+            this.btnFor.TabIndex = 18;
+            this.btnFor.Text = "FOR";
+            this.btnFor.UseVisualStyleBackColor = true;
+            this.btnFor.Click += new System.EventHandler(this.btnFor_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(527, 81);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.Text = "LIMPAR";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // txtSoNumero
+            // 
+            this.txtSoNumero.Location = new System.Drawing.Point(12, 264);
+            this.txtSoNumero.Name = "txtSoNumero";
+            this.txtSoNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtSoNumero.TabIndex = 22;
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(12, 209);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.TabIndex = 21;
+            // 
+            // btnSonumero
+            // 
+            this.btnSonumero.Location = new System.Drawing.Point(12, 235);
+            this.btnSonumero.Name = "btnSonumero";
+            this.btnSonumero.Size = new System.Drawing.Size(100, 23);
+            this.btnSonumero.TabIndex = 23;
+            this.btnSonumero.Text = "SONUMERO";
+            this.btnSonumero.UseVisualStyleBackColor = true;
+            this.btnSonumero.Click += new System.EventHandler(this.btnSonumero_Click);
+            // 
+            // btnSoLetra
+            // 
+            this.btnSoLetra.Location = new System.Drawing.Point(121, 235);
+            this.btnSoLetra.Name = "btnSoLetra";
+            this.btnSoLetra.Size = new System.Drawing.Size(100, 23);
+            this.btnSoLetra.TabIndex = 24;
+            this.btnSoLetra.Text = "SO LETRA";
+            this.btnSoLetra.UseVisualStyleBackColor = true;
+            this.btnSoLetra.Click += new System.EventHandler(this.btnSoLetra_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 300);
+            this.Controls.Add(this.btnSoLetra);
+            this.Controls.Add(this.btnSonumero);
+            this.Controls.Add(this.txtSoNumero);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnWhile);
+            this.Controls.Add(this.btnFor);
+            this.Controls.Add(this.lstFor);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.btnSomar);
             this.Controls.Add(this.btnMultiplicar);
@@ -255,6 +343,14 @@
         private System.Windows.Forms.Button btnMultiplicar;
         private System.Windows.Forms.Button btnSomar;
         private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.ListBox lstFor;
+        private System.Windows.Forms.Button btnWhile;
+        private System.Windows.Forms.Button btnFor;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.TextBox txtSoNumero;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.Button btnSonumero;
+        private System.Windows.Forms.Button btnSoLetra;
     }
 }
 
