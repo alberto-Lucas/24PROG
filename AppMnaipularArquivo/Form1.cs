@@ -76,7 +76,107 @@ namespace AppMnaipularArquivo
             //c:/Teste.txt
             return
                 Path.Combine(txtCaminho.Text,
-                txtArquivo.Text + ".txt");
+                txtNome.Text + ".txt");
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            //Antes de criar o arquivo 
+            //precisamos validar o diretorio
+            //Se verdadeiro tudo ok
+            //se false temos problemas e precimos
+            //interromper a execução
+
+            if (!ValidarDiretorio())
+                return;
+
+            //Recuperar o diretorio completo
+            string diretorioCompleto = 
+                GetDiretorioCompleto();
+
+            //Verificamos se o arquivo ja existe
+            if(File.Exists(diretorioCompleto))
+                MessageBox.Show("O arquivo ja existe.");
+            else
+            {
+                //Criamos um arquivo vazio
+                File.WriteAllText(
+                    diretorioCompleto, "");
+
+                MessageBox.Show(
+                    "Arquivo criado com sucesso.");
+            }
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            if(!ValidarDiretorio())
+                return;
+
+            string diretorioCompleto =
+                GetDiretorioCompleto();
+
+            //Gravamos o conteudo do TextBox(txtTexto)
+            //no arquivo
+            //Todo o conteudo do arquivo será subistituido
+            //Sempre adicionamos uma linha em branco
+            //ao final do arquivo
+            //Environment.NewLine serve para quebrar/adicionar 
+            //linha
+            File.WriteAllText(
+                diretorioCompleto,
+                txtTexto.Text + Environment.NewLine);
+
+            MessageBox.Show("Dados gravados com sucesso");
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarDiretorio())
+                return;
+
+            string diretorioCompleto =
+                GetDiretorioCompleto();
+
+            //Iremos adicionar o conteduo do TextBox
+            //dentro do arquivo
+            //ou Será adicionado o novo conteudo
+            //ao conteudo existente no arquivo
+            File.AppendAllText(
+                diretorioCompleto,
+                txtTexto.Text + Environment.NewLine);
+
+            MessageBox.Show(
+                "Dados adicionados com sucesso.");
+        }
+
+        private void btnCarregar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarDiretorio())
+                return;
+
+            string diretorioCompleto = 
+                GetDiretorioCompleto();
+
+            if(File.Exists(diretorioCompleto))
+            {
+                MessageBox.Show(
+                    "O arquivo não existe.");
+            }
+            else
+            {
+                //Iremos carregar o
+                //conteudo do arquivo
+                //ReadAllText responsavel
+                //por ler o arquivo
+
+                txtArquivo.Text = 
+                    File.ReadAllText(
+                        diretorioCompleto);
+
+                MessageBox.Show(
+                    "Conteudo carregado com sucesso.");
+            }
         }
     }
 }

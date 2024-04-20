@@ -39,8 +39,9 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.txtArquivo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnArquivo = new System.Windows.Forms.Button();
+            this.btnCarregar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +121,7 @@
             this.btnCriar.TabIndex = 7;
             this.btnCriar.Text = "Criar";
             this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
             // 
             // btnGravar
             // 
@@ -129,6 +131,7 @@
             this.btnGravar.TabIndex = 8;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // txtArquivo
             // 
@@ -152,21 +155,33 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Arquivo:";
             // 
-            // btnArquivo
+            // btnCarregar
             // 
-            this.btnArquivo.Location = new System.Drawing.Point(12, 473);
-            this.btnArquivo.Name = "btnArquivo";
-            this.btnArquivo.Size = new System.Drawing.Size(75, 23);
-            this.btnArquivo.TabIndex = 11;
-            this.btnArquivo.Text = "Carregar";
-            this.btnArquivo.UseVisualStyleBackColor = true;
+            this.btnCarregar.Location = new System.Drawing.Point(12, 473);
+            this.btnCarregar.Name = "btnCarregar";
+            this.btnCarregar.Size = new System.Drawing.Size(75, 23);
+            this.btnCarregar.TabIndex = 11;
+            this.btnCarregar.Text = "Carregar";
+            this.btnCarregar.UseVisualStyleBackColor = true;
+            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.Location = new System.Drawing.Point(93, 262);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.TabIndex = 12;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 502);
-            this.Controls.Add(this.btnArquivo);
+            this.Controls.Add(this.btnAdicionar);
+            this.Controls.Add(this.btnCarregar);
             this.Controls.Add(this.txtArquivo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGravar);
@@ -198,8 +213,9 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.TextBox txtArquivo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnArquivo;
+        private System.Windows.Forms.Button btnCarregar;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button btnAdicionar;
     }
 }
 
